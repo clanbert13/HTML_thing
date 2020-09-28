@@ -28,5 +28,5 @@ function Foreach()
 
 function myFunction(value)
 {
-      
+    text += "<li>" + value + "</li>";    
 }
