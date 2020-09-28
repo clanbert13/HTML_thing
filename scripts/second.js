@@ -4,7 +4,7 @@
 /* eslint-env node */
 /* eslint-env browser */
 
-function check() {
+function Check() {
  var x = 10;
  var y = 20;
  var z = x + y;
