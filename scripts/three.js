@@ -25,3 +25,8 @@ function Foreach()
     
     document.getElementById('foreach').innerHTML = text;
 }
+
+function myFunction(value)
+{
+    text += "<li>" + value + "</li>";    
+}
