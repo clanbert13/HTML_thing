@@ -1,7 +1,5 @@
-/* jslint devel: true */
-/* eslint-disable no-console */
-/* eslint no-undef: "error" */
-/* eslint-env node */
+/* eslint no-unused-vars: "error"*/
+/* eslint-disable no-unused-vars */
 /* eslint-env browser */
 
 function Check() {
