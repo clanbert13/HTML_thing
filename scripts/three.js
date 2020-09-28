@@ -20,7 +20,7 @@ function Foreach()
 {
     var array = ["jeremy", "zoshua", "chris", "anton", "jesus"];
     text = "<ul>";
-    name.forEach(myFunction);
+    array.forEach(myFunction);
     text += "</ul>";
     
     document.getElementById('foreach').innerHTML = text;
@@ -28,5 +28,5 @@ function Foreach()
 
 function myFunction(value)
 {
-    text += "<li>" + value + "</li>";    
+      
 }
