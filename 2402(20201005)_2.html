@@ -1,0 +1,26 @@
+  
+<!doctype html>
+<html>
+
+<head>
+    <title> Event2 </title>
+    <meta charset="utf-8">
+    <script>
+        function displayTime() {
+            var d = new Date();
+            alert("CurrentDate : " + d.toLocaleDateString());
+        }
+        window.onload = function() {
+            var btn = document.getElementById("btn");
+            btn.onclick = displayTime;
+        };
+
+    </script>
+</head>
+
+<body>
+    <input type="button" value="click" id="btn">
+
+</body>
+
+</html>
