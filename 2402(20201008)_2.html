@@ -1,41 +1,40 @@
 <!doctype html>
 <html>
 <head>
-    <title>2. 팩토리얼</title>
+    <title>2.팩토리얼</title>
     <meta charset="utf-8">
     <script>
-        function doRecFact() {
+        function doRecPac() {
             var result = 1;
-            //널 체크
             if (document.getElementById("num").value.length == 0) {
-                alert("정수를 입력해주세요");
                 return;
             }
             var n = parseInt(document.getElementById("num").value);
-            result = rec_fact(n);
-            document.getElementById("result").innerHTML = "recursive 결과 = " + result;
+            result = rec_pac(n);
+            document.getElementById("result").innerHTML = "recursive : " + result;
         }
 
-        function doWhileFact() {
+        function doWhilePac() {
             var result = 1;
+            if (document.getElementById("num").value.length == 0) {
+                return;
+            }
             var n = parseInt(document.getElementById("num").value);
-            result = while_fact(n);
-            document.getElementById("result").innerHTML = "while 결과 = " + result;
+            result = while_pac(n);
+            document.getElementById("result").innerHTML = "while : " + result;
         }
 
-        function rec_fact(n) {
+        function rec_pac(n) {
             if (n <= 1)
                 return 1;
             else
                 return n * rec_fact(n - 1);
         }
 
-        function while_fact(n) {
+        function while_pac(n) {
             var result = 1;
             while (n > 1) {
                 result *= n--;
-                //   n -= 1;
-
             }
             return result;
         }
@@ -45,11 +44,11 @@
 
 <body>
 
-    <p> 수를 입력해주세요. <input type="text" size=10 id="num" autofocus> </p>
-    <p id="result">여기에 결과 표시</p>
+    <p><input type="text" size=10 id="num" autofocus> </p>
+    <p id="result">===========</p>
     <p>
-        <input type="button" value="팩토리얼구하기(재귀)" onclick="doRecFact();">
-        <input type="button" value="팩토리얼구하기(while)" onclick="doWhileFact()">
+        <input type="button" value="pac : recursive" onclick="doRecPac();">
+        <input type="button" value="pac : while" onclick="doWhilePac()">
     </p>
 
 </body>
