@@ -14,7 +14,7 @@
         while (x <= bound) {
             for (var i = 2 * x; i <= n; i += x)
                 array[i] = false;
-            while (!array[x++]);
+            while (!array[++x]);
         }
 
         document.write("<p> prime number </p>");
