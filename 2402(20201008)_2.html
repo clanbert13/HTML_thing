@@ -10,7 +10,7 @@
                 return;
             }
             var n = parseInt(document.getElementById("num").value);
-            result = rec_pac(n);
+            result = recPac(n);
             document.getElementById("result").innerHTML = "recursive : " + result;
         }
 
@@ -20,18 +20,18 @@
                 return;
             }
             var n = parseInt(document.getElementById("num").value);
-            result = while_pac(n);
+            result = whilePac(n);
             document.getElementById("result").innerHTML = "while : " + result;
         }
 
-        function rec_pac(n) {
+        function recPac(n) {
             if (n <= 1)
                 return 1;
             else
-                return n * rec_fact(n - 1);
+                return n * recPac(n - 1);
         }
 
-        function while_pac(n) {
+        function whilePac(n) {
             var result = 1;
             while (n > 1) {
                 result *= n--;
