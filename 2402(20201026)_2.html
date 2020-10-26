@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title> Canvas 2D API</title>
+ <meta charset="utf-8">
+ <script>
+ window.onload = function() {
+var canvas1 = document.getElementById("canvas1");
+var context1 = canvas1.getContext("2d");
+var x = canvas1.width / 6;
+var y = canvas1.height / 6;
+var radius = 20;
+var startAngle = 0 * Math.PI / 180;
+var endAngle = 270 * Math.PI / 180;
+     
+
+//1 반원
+context1.beginPath();
+context1.arc(x, y, radius, startAngle, Math.PI);
+context1.closePath();
+context1.stroke();
+     
+//2 호 180
+context1.beginPath();
+context1.arc(x, y * 2, radius, startAngle, Math.PI, true);
+context1.stroke(); 
+
+//3호 원 + 현
+context1.beginPath();
+context1.arc(x * 2, y, radius, startAngle, endAngle);
+context1.closePath();
+context1.stroke(); 
+     
+//4호 호 90
+context1.beginPath();
+context1.arc(x * 2, y * 2, radius, startAngle, endAngle, true);
+context1.stroke(); 
+     
+//5호 원
+context1.beginPath();
+context1.arc(x * 3, y, radius, startAngle, 2 * Math.PI);
+context1.stroke();
+     
+//6호 원
+context1.beginPath();
+context1.arc(x * 3, y * 2, radius, startAngle, 2 * Math.PI);
+context1.stroke();
+
+     
+//채색됨
+context1.fillStyle = "rgb(120,120,255)";
+//1 반원
+context1.beginPath();
+context1.arc(x, y * 3, radius, startAngle, Math.PI);
+context1.closePath();
+context1.fill();
+     
+//2 호 180
+context1.beginPath();
+context1.arc(x, y * 4, radius, startAngle, Math.PI, true); 
+context1.fill();
+
+//3호 원 + 현
+context1.beginPath();
+context1.arc(x * 2, y * 3, radius, startAngle, endAngle);
+context1.closePath(); 
+context1.fill();
+     
+//4호 호 90
+context1.beginPath();
+context1.arc(x * 2, y * 4, radius, startAngle, endAngle, true);
+context1.fill();
+     
+//5호 원
+context1.beginPath();
+context1.arc(x * 3, y * 3, radius, startAngle, 2 * Math.PI);
+context1.fill();
+     
+//6호 원
+context1.beginPath();
+context1.arc(x * 3, y * 4, radius, startAngle, 2 * Math.PI);
+context1.fill();
+     
+ }
+ </script>
+</head>
+<body>
+ <canvas id="canvas1" height="300" width="300">This browser doesn't support canvas</canvas>
+</body>
+</html>
