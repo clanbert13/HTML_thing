@@ -18,7 +18,7 @@
                     ctx.textAlign = "center";
                     ctx.fillText("hello world", canvas.width / 2, canvas.height / 2);
                     
-                    input.value = "Text 예제 숨기기";
+                    input.value = "Text 숨기기";
                     
                     isText = Boolean(true);
                 }
@@ -26,7 +26,7 @@
                 {
                     var ctx = canvas.getContext("2d");
                     ctx.clearRect(0,0, canvas.width, canvas.height);
-                    input.value = "Text 예제 보이기";
+                    input.value = "Text 보이기";
                     isText = Boolean(false);
                 }
             }
@@ -42,14 +42,14 @@
                     var img = document.getElementById("scream"); 
                     ctx.drawImage(img, 10, 10);
                 
-                    input.value = "Image 예제 숨기기";
+                    input.value = "Image 숨기기";
                     isDraw = Boolean(true);
                 }
                 else
                 {
                     var ctx = canvas.getContext("2d");
                     ctx.clearRect(0,0, canvas.width, canvas.height);
-                    input.value = "Image 예제 보이기";
+                    input.value = "Image 보이기";
                     isDraw = Boolean(false);
                 }
             }
@@ -59,8 +59,8 @@
     </head>
     
     <body>
-        <input id="textButton" type="button" value="Text 예제 보이기" onclick="DrawText()">
-        <input id="drawButton" type="button" value="Image 예제 보이기" onclick="DrawPicture()"><p></p>
+        <input id="textButton" type="button" value="Text 예제" onclick="DrawText()">
+        <input id="drawButton" type="button" value="Image 예제" onclick="DrawPicture()"><p></p>
         
         <img id="scream" width="220" height="277" src="pic_the_scream.jpg" alt="The Scream" style="display:none">
         
