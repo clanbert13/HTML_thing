@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="button" name="btn1" value="Text 예제" onclick="drawText()">
+    <input type="button" name="btn2" value="Image 예제" onclick="drawPicture()">
+    <p></p>
+    
+    <img id="scream" width="220" height="277" src="./images/pic_the_scream.jpg" alt="The Scream">
+    <p></p>
+    
+<script>
+function drawPicture() {
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    var img = document.getElementById("scream");
+    ctx.drawImage(img, 10, 10);
+};
+function drawText() {
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    context.font = "30px Comic Sans MS";
+    context.fillStyle = "red";
+    context.textAlign = "center";
+    //context.fillText("Hello World", 10, 50);
+    context.fillText("Hello world", canvas.width / 2, canvas.height / 2);
+}
+</script>
+    
+    <canvas id="canvas" width="240" height="297" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+    
+</body>
+</html>
